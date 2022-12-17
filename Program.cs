@@ -47,7 +47,7 @@ namespace Devops_project
                 driver.FindElement(By.XPath("//*[@id=\"container\"]/ytd-toggle-button-renderer/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]")).Click();
                 Thread.Sleep(1000);
                 driver.FindElement(By.XPath("/html/body/ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div[2]/div/ytd-section-list-renderer/div[1]/div[2]/ytd-search-sub-menu-renderer/div[1]/iron-collapse/div/ytd-search-filter-group-renderer[5]/ytd-search-filter-renderer[2]/a/div/yt-formatted-string")).Click();
-                Thread.Sleep(1000);
+                Thread.Sleep(3000);
 
                 List<string> titleList = new List<string>();
                 List<string> viewsList = new List<string>();
@@ -80,7 +80,7 @@ namespace Devops_project
                 }
                 Console.Clear();
                 Thread.Sleep(5000);
-                for (int i = 1; i < 6; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     Console.WriteLine("Title: " + titleList[i]);
                     Console.WriteLine("Views: " + viewsList[i]);
@@ -115,7 +115,7 @@ namespace Devops_project
                 searchInput.Click();
                 searchInput.SendKeys(searchIctjob);   
                 searchInput.Submit();
-                Thread.Sleep(8000);
+                Thread.Sleep(15000);
                 driver.FindElement(By.XPath("/html/body/section/div[1]/div/div[2]/div/div/form/div[2]/div/div/div[2]/section/div/div[1]/div[2]/div/div[2]/span[2]/a")).Click();
                 Thread.Sleep(2000);
 
@@ -166,10 +166,9 @@ namespace Devops_project
                 Console.Clear();
                 Thread.Sleep(5000);
 
-                for (int i = 1; i < 6; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     
-                   
 
                     Console.WriteLine("Job name: " + jobList[i]);
                     Console.WriteLine("Company name: " + companyList[i]);
@@ -223,7 +222,8 @@ namespace Devops_project
               
                 var searchInputCoin = driver.FindElement(By.XPath("//*[@id=\"__next\"]/div/div[1]/div[1]/div[1]/div/div[2]/div[4]/div"));
                 searchInputCoin.Click();
-               
+                Thread.Sleep(5000);
+
                 var searchInputCoin2 = driver.FindElement(By.XPath("//*[@id=\"tippy-1\"]/div/div/div/div/div[1]/div[1]/div[1]/input"));
                 
                 
